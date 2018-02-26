@@ -1,5 +1,6 @@
 package org.gradle.sample;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -8,53 +9,71 @@ import static org.junit.Assert.assertEquals;
  * Created by Abner on 2/22/2018.
  */
 public class GreeterTest {
-  @Test
-  public void testGetGreeting() {
-    final String expectedResult = "123456789";
-    assertEquals(expectedResult, "123456789");
+  private Greeter object;
+
+  @Before
+  public void initialize() {
+    object = new Greeter();
   }
 
   @Test
-  public void testGetGreetingWithWord() {
-    assertEquals("Hello", "Hello");
+  public void testGetGreeting() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
 
   @Test
-  public void testGetGreetingWithWords() {
-    assertEquals("Hello", "Hello");
+  public void testGetGreetingWithWord() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
 
   @Test
-  public void testGetGreetingWithNumbers() {
-    assertEquals("1212", "1212");
+  public void testGetGreetingWithWords() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
 
   @Test
-  public void testGetGreetingWithChar() {
-    assertEquals("H", "H");
+  public void testGetGreetingWithNumbers() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
 
   @Test
-  public void testGetGreetingWithDouble() {
-    assertEquals("12.3", "12.3");
+  public void testGetGreetingWithChar() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
 
   @Test
-  public void testGetGreetingWithBoolean() {
-    assertEquals("12", "12");
+  public void testGetGreetingWithDouble() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
 
   @Test
-  public void testGetGreetingWithNone() {
-    assertEquals("12", "12");
+  public void testGetGreetingWithBoolean() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
+
   @Test
-  public void testGetGreetingWithInteger() {
-    assertEquals("12", "12");
+  public void testGetGreetingWithNone() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
+
   @Test
-  public void testGetGreetingLabel() {
-    assertEquals("Message", "Message");
+  public void testGetGreetingWithInteger() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
+  }
+
+  @Test
+  public void testGetGreetingLabel() throws Exception {
+    final String expectedResuld = "Start example with gradle by Abner";
+    assertEquals(object.getGreeting(), expectedResuld);
   }
 
 }
