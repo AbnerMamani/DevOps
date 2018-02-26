@@ -6,9 +6,15 @@ buildscript {
         classpath 'org.akhikhl.gretty:gretty:1.4.2'
     }
 }
-apply plugin: 'org.akhikhl.gretty'
 
+plugins {
+    id "org.sonarqube" version "2.5"
+}
+
+apply plugin: 'org.akhikhl.gretty'
 apply plugin: 'war'
+apply plugin: "org.sonarqube"
+apply plugin: "jacoco"
 
 repositories {
     jcenter()
@@ -22,4 +28,11 @@ dependencies {
 
 gretty {
     httpPort = 8080
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "web_app"
+        property "sonar.projectKey", "wa:webabb"
+    }
 }
